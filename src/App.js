@@ -36,24 +36,23 @@ function App() {
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       if (choiceTwo.src === choiceOne.src) {
-        setCards(prevCards => {
-            return prevCards.map(card => {
-                if(card.src === choiceOne.src){
-                    return {...card, matched: true}
-                } else {
-                    return card
-                }
-            })
-        })
+        setCards((prevCards) => {
+          return prevCards.map((card) => {
+            if (card.src === choiceOne.src) {
+              return { ...card, matched: true };
+            } else {
+              return card;
+            }
+          });
+        });
         resetTurn();
       } else {
-        
-        resetTurn();
+        setTimeout(() => resetTurn(), 1000);
       }
     }
   }, [choiceOne, choiceTwo]);
 
-  console.log(cards)
+  console.log(cards);
 
   //reset choices and increase turn
   const resetTurn = () => {
@@ -69,7 +68,12 @@ function App() {
 
       <div className="card-grid">
         {cards.map((card) => (
-          <SingleCard key={card.id} card={card} handleChoice={handleChoice} />
+          <SingleCard 
+            key={card.id} 
+            card={card} 
+            handleChoice={handleChoice}
+            flipped={card === choiceOne || card === choiceTwo || card.matched} 
+          />
         ))}
       </div>
     </div>
