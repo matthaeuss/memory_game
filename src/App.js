@@ -34,17 +34,16 @@ function App() {
 
   //compare two selected cards
   useEffect(() => {
-    if(choiceOne && choiceTwo){
-
-        if(choiceTwo.src === choiceOne.src){
-            console.log("match")
-            resetTurn();
-        } else {
-            console.log("dont match")
-            resetTurn();
-        }
+    if (choiceOne && choiceTwo) {
+      if (choiceTwo.src === choiceOne.src) {
+        console.log("match");
+        resetTurn();
+      } else {
+        console.log("dont match");
+        resetTurn();
+      }
     }
-  }, [choiceOne, choiceTwo])
+  }, [choiceOne, choiceTwo]);
 
   //reset choices and increase turn
   const resetTurn = () => {
