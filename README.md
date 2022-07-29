@@ -30,4 +30,4 @@ npm start
 
 ### Feature
 
-<img src="public/img/cover.png"
+<img src="public/img/cover.png">
