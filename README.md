@@ -28,6 +28,11 @@ Features:
 npm start
 ```
 
-### Feature
+### Gallery 
 
-<img src="public/img/cover.png">
+<img src="public/img/MG_01.png">
+<img src="public/img/MG_02.png">
+<img src="public/img/MG_03.png">
+
+
+### Have Fun!
