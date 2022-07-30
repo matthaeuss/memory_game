@@ -86,7 +86,7 @@ function App() {
           />
         ))}
       </div>
-      <p>Truns: {turns}</p>
+      <p>Turns: {turns}</p>
     </div>
   );
 }
